@@ -7,3 +7,6 @@ mod 'puppetlabs-ruby', '1.0.0'
 mod 'puppetlabs-stdlib', '4.24.0'
 mod 'puppetlabs-powershell', '2.3.0'
 mod 'puppetlabs-yumrepo_core', '1.0.3'
+mod 'puppet-zypprepo',
+  :git    => 'https://github.com/mx-psi/puppet-zypprepo',
+  :branch => 'mx-psi/repo_gpgcheck'
