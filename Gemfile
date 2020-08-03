@@ -22,15 +22,14 @@ group :development do
   gem "kitchen-puppet"
   gem "kitchen-docker"
   gem "kitchen-verifier-serverspec"
+  gem "test-kitchen", '~> 1.16.0'
 
   if RUBY_VERSION >= '2.3'
-    gem "test-kitchen"
     gem "puppet-module-posix-default-r#{minor_version}", '~> 0.3', require: false, platforms: [:ruby]
     gem "puppet-module-posix-dev-r#{minor_version}", '~> 0.3',     require: false, platforms: [:ruby]
     gem "puppet-module-win-default-r#{minor_version}", '~> 0.3',   require: false, platforms: [:mswin, :mingw, :x64_mingw]
     gem "puppet-module-win-dev-r#{minor_version}", '~> 0.3',       require: false, platforms: [:mswin, :mingw, :x64_mingw]
   else
-    gem "test-kitchen", '~> 1.16.0'
     gem "puppetlabs_spec_helper", "~> 2.14.1"
     gem "puppet-lint", "~> 2.4.2"
     gem "metadata-json-lint", "~> 1.2.2"
