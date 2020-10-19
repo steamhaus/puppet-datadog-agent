@@ -77,6 +77,7 @@ class datadog_agent::redhat(
 
   package { $datadog_agent::params::package_name:
     ensure  => $agent_version,
+    require => Yumrepo[datadog]
   }
 
 }
